@@ -1,0 +1,11 @@
+{
+  "xsdPath": "/home/dell/Data/Schemas/xsds/UBL2.1/xsd/maindoc/",
+  "enSchematron": "/home/dell/Data/Rules/schematrons/",
+  "zatcaSchematron": "/home/dell/Data/Rules/schematrons/",
+  "certPath": "/home/dell/Data/Certificates/",
+  "privateKeyPath": "/home/dell/Data/Certificates/",
+  "pihPath": "/home/dell/Data/PIH/",
+  "certPassword": "",
+  "inputPath": "/home/dell/Data/Input",
+  "usagePathFile": "/home/dell/Configuration/"
+}

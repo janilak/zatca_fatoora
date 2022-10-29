@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_fatoora_sub_tree" model="ir.ui.view">
+        <field name="name">fatoora.call.tree</field>
+        <field name="model">fatoora.call</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fatoora_sub_form" model="ir.ui.view">
+        <field name="name">fatoora.call.form</field>
+        <field name="model">fatoora.call</field>
+        <field name="arch" type="xml">
+            <form string="Expense">
+                <header>
+                    <button name="call" string="Call" type="object" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+
+                            <field name="output"/>
+                        </group>
+                        <group>
+                            <label for="certificate"/>
+                            <div class="o_row" name="divzatcacertificate">
+                                <field name="select_certificate"/> User Default
+                                <field name="certificate"/>
+                            </div>
+                            <label for="pih"/>
+                            <div class="o_row" name="divzatcapih">
+                                <field name="select_pih"/> User Default
+                                <field name="pih"/>
+                            </div>
+                            <label for="private_key"/>
+                            <div class="o_row" name="divzatcaprivatekey">
+                                <field name="select_private_key"/> User Default
+                                <field name="private_key"/>
+                            </div>
+                        </group>
+
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_fatoora_sub" model="ir.actions.act_window">
+        <field name="name">Fatoora Record</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">fatoora.call</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="context">{}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Fatoora Record!
+            </p>
+        </field>
+
+    </record>
+
+    <menuitem name="Fatoora" id="fatoora_main" sequence="10"/>
+    <menuitem name="Fatoora" id="fatoora_sub"
+              action="action_fatoora_sub" sequence="2"
+              parent="fatoora_main"/>
+</odoo>
